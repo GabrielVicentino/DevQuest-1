@@ -1,0 +1,156 @@
+body{
+    background: url(images/bg-desktop.svg) center center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    max-width: 1440px;
+    min-height: 100vh;
+    font-size: 62.5%;
+    display: grid;
+    grid-template-areas:"header header"
+                        "image info"
+                        "footer footer" ;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+.header{
+grid-area: header;
+}
+.logo{
+    margin: 2rem 0 2rem 2rem;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 3rem;
+}
+.content .image{
+    grid-area: image;
+}
+.content .info{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 7rem;
+    
+}
+.info h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    line-height: 4rem;
+    color: #ffff;    
+    margin-bottom: 1.5rem;
+}
+.info p{
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffff;
+    margin-left: 1.7rem;
+
+}
+.btn-register{
+    padding: 1rem 4rem;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: solid 0px;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0px 2px 30px 2px rgba(0,0,0,0.38);
+    transition: 0.3s ease-in-out;
+    margin-left:1.7rem; ;
+
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 3rem;
+    font-size: 1.5rem;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}  
+.facebook,
+.instagram,
+.twitter{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: solid #ffff 1px;
+    text-align: center;
+    padding: 0.7rem;
+}
+.btn-register:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+    
+}
+.social i:hover{
+    border: solid 1px hsl(300, 69%, 71%);
+    color:hsl(300, 69%, 71%);
+}
+
+@media(max-width:375px){
+    body{
+       
+        background: url(images/bg-mobile.svg) top fixed no-repeat;
+        background-size: contain;
+        background-color: hsl(257, 40%, 49%);
+        overflow-x: hidden;
+    }
+    .content{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .image{
+        max-width: 100%;
+       
+    }
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width: 160px;
+    }
+    .info h1{
+        text-align: center;
+        margin-top: 1.8rem;
+        font-size: 2rem;
+        padding: 0;
+        line-height: 3rem;
+    }
+    .info p{
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0 0.3rem;
+    }
+    .btn-register{
+        margin-top: 1.5rem;
+    }
+    .footer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 0;
+
+    }
+
+}
+
+
